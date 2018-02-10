@@ -7,7 +7,7 @@
  * @version  1.0.0
  * @package  Sikeller_Tools/Abstracts
  * @category Widgets
- * @author   ThemeGrill
+ * @author   Simon Keller
  */
 abstract class SK_Widget extends WP_Widget {
 

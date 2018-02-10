@@ -3,7 +3,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://sikeller.de
+ * @link       http://sikeller.de/sikeller-tools
  * @since      1.0.0
  *
  * @package    Sikeller_Tools

@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://sikeller.de
+ * @see     http://sikeller.de/sikeller-tools
  * @since      1.0.0
  *
  * @package    Sikeller_Tools

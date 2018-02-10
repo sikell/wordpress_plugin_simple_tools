@@ -13,11 +13,11 @@
  * @package           sikeller-tools
  *
  * @wordpress-plugin
- * Plugin Name:       Simple Tools
- * Plugin URI:        http://sikeller.de/wp-tools/
- * Description:       A collection of some usefull tools while developing a wordpress site.
+ * Plugin Name:       SK Simple Tools
+ * Plugin URI:        http://sikeller.de/simple-tools/
+ * Description:       A collection of some useful tools for developing with wordpress.
  * Version:           1.0.0
- * Author:            sikeller.de
+ * Author:            Simon Keller
  * Author URI:        http://sikeller.de/
  * License:           
  * License URI:       
