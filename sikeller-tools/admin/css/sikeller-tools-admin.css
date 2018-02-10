@@ -1,4 +1,9 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.sikeller-tab-title-container>a {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px #e5e5e5 solid;
+}
+.sikeller-tab-title-container>a.active {
+    background-color: #e5e5e5;
+}
