@@ -59,6 +59,7 @@ add_filter('siteorigin_panels_widget_dialog_tabs', 'sikeller_tools_widgets_tab',
 /**
  * Remove Widget Title.
  * @param string $title The widget title.
+ * @return bool|string
  */
 function sikeller_tools_remove_widget_title( $title ) {
 	if ( '!' === substr( $title, 0, 1 ) ) {

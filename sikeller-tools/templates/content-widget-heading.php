@@ -20,8 +20,8 @@ $subheading = isset( $instance[ 'subheading' ] ) ? $instance[ 'subheading' ] : '
 ?>
 <?php
 if( !empty( $heading ) ) { ?>
-	<h2 class="section-title-h2"><?php echo esc_html($heading); ?></h2>
+	<h2 class="section-title"><?php echo esc_html($heading); ?></h2>
 <?php } ?>
 <?php if( !empty( $subheading ) ) { ?>
-	<div class="section-description-h2"><?php echo esc_html($subheading); ?></div>
+	<div class="section-description"><?php echo esc_html($subheading); ?></div>
 <?php } ?>

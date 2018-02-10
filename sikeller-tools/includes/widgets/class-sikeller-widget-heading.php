@@ -62,4 +62,6 @@ class SK_Widget_Heading extends SK_Widget {
 
 		$this->widget_end( $args );
 	}
+
+
 }
