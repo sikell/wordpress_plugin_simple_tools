@@ -60,7 +60,7 @@ abstract class SK_Widget extends WP_Widget {
 		$widget_ops = array(
 			'classname'   => $this->widget_cssclass,
 			'description' => $this->widget_description,
-			'customize_selective_refresh' => false,
+			'customize_selective_refresh' => true,
 		);
 
 		parent::__construct( $this->widget_id, $this->widget_name, $widget_ops, $this->control_ops );
@@ -93,7 +93,7 @@ abstract class SK_Widget extends WP_Widget {
 
 
     /**
-     * Outputs the settings update form.
+     * Outputs the settings update form. This is the widget backend.
      *
      * @see   WP_Widget->form
      * @param array $instance
@@ -186,6 +186,35 @@ abstract class SK_Widget extends WP_Widget {
             } ?>
         </div><!-- .sikeller-tools-tab-content-container -->
         <?php
+    }
+
+    /**
+     * Updating widget replacing old instances with new instance. This method sanitizes input values.
+     * @param $new_instance
+     * @param $old_instance
+     * @return mixed
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+
+        if ( empty( $this->settings ) ) {
+            return $instance;
+        }
+
+        // Loop settings and get values to save.
+        foreach ( $this->settings as $key => $setting ) {
+            if (!isset($setting['type'])) {
+                continue;
+            }
+
+            // Format the value based on settings type.
+            $instance[$key] = isset($new_instance[$key]) ? strip_tags( $new_instance[$key]) : '';
+
+            // Sanitize the value of a setting.
+            $instance[ $key ] = apply_filters( 'flash_toolkit_widget_settings_sanitize_option', $instance[ $key ], $new_instance, $key, $setting );
+        }
+
+        return $instance;
     }
     
 }
