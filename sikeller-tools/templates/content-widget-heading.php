@@ -16,11 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $heading    = isset( $instance[ 'heading-title' ] ) ? $instance[ 'heading-title' ] : '';
 $subheading = isset( $instance[ 'subheading' ] ) ? $instance[ 'subheading' ] : '';
+$tag = isset( $instance[ 'tag' ] ) ? $instance[ 'tag' ] : 'h2';
 
 ?>
 <?php
 if( !empty( $heading ) ) { ?>
-	<h2 class="section-title"><?php echo esc_html($heading); ?></h2>
+	<<?php echo $tag; ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo $tag; ?>>
 <?php } ?>
 <?php if( !empty( $subheading ) ) { ?>
 	<div class="section-description"><?php echo esc_html($subheading); ?></div>

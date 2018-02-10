@@ -33,12 +33,27 @@ class SK_Widget_Heading extends SK_Widget {
 				'type'  => 'text',
 				'std'   => '',
 				'label' => __( 'Heading', 'sikeller-tools' ),
+                'group' => __( 'General', 'sikeller-tools' ),
 			),
 			'subheading'  => array(
 				'type'  => 'text',
 				'std'   => '',
 				'label' => __( 'Sub Heading', 'sikeller-tools' ),
+                'group' => __( 'General', 'sikeller-tools' ),
 			),
+            'tag'  => array(
+                'type'  => 'select',
+                'std'   => 'h2',
+                'label' => __( 'Heading Tag', 'sikeller-tools' ),
+                'options' => array(
+                    'h1'  => __( 'h1', 'sikeller-tools' ),
+                    'h2' => __( 'h2', 'sikeller-tools' ),
+                    'h3' => __( 'h3', 'sikeller-tools' ),
+                    'h4' => __( 'h4', 'sikeller-tools' ),
+                    'h5' => __( 'h5', 'sikeller-tools' ),
+                ),
+                'group' => __( 'General', 'sikeller-tools' ),
+            ),
 		) );
 
 		parent::__construct();

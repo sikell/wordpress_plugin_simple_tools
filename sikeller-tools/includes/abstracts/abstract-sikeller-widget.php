@@ -161,6 +161,19 @@ abstract class SK_Widget extends WP_Widget {
                                     <?php
                                     break;
 
+                                case 'select' :
+                                    ?>
+                                    <p class="ft-widget-col <?php echo esc_attr( $field_width ); ?>">
+                                        <label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
+                                        <select class="widefat <?php echo esc_attr( $class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>" name="<?php echo $this->get_field_name( $key ); ?>">
+                                            <?php foreach ( $setting['options'] as $option_key => $option_value ) : ?>
+                                                <option value="<?php echo esc_attr( $option_key ); ?>" <?php selected( $option_key, $value ); ?>><?php echo esc_html( $option_value ); ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </p>
+                                    <?php
+                                    break;
+
                                 // Default: run an action.
                                 default :
                                     do_action( 'sikeller_tools_toolkit_widget_field_' . $setting['type'], $key, $value, $setting, $instance );
