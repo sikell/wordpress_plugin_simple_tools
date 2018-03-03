@@ -10,19 +10,21 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 
-$heading    = isset( $instance[ 'heading-title' ] ) ? $instance[ 'heading-title' ] : '';
-$subheading = isset( $instance[ 'subheading' ] ) ? $instance[ 'subheading' ] : '';
-$tag = isset( $instance[ 'tag' ] ) ? $instance[ 'tag' ] : 'h2';
+$allowedTags = array('h1', 'h2', 'h3', 'h4', 'h5');
+
+$heading = isset($instance['heading-title']) ? $instance['heading-title'] : '';
+$subheading = isset($instance['subheading']) ? $instance['subheading'] : '';
+$tag = isset($instance['tag']) && in_array($instance['tag'], $allowedTags) ? $instance['tag'] : 'h2';
 
 ?>
 <?php
-if( !empty( $heading ) ) { ?>
-	<<?php echo $tag; ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo $tag; ?>>
+if (!empty($heading)) { ?>
+    <<?php echo $tag; ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo $tag; ?>>
 <?php } ?>
-<?php if( !empty( $subheading ) ) { ?>
-	<div class="section-description"><?php echo esc_html($subheading); ?></div>
+<?php if (!empty($subheading)) { ?>
+    <div class="section-description"><?php echo esc_html($subheading); ?></div>
 <?php } ?>
