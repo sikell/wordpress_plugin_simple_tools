@@ -176,7 +176,7 @@ abstract class SK_Widget extends WP_Widget {
 
                                 case 'image' :
                                     ?>
-                                    <div id="tg-widget-image-uploader" class="flash-media <?php echo esc_attr( $class ); ?>">
+                                    <div id="tg-widget-image-uploader" class="sikeller-media <?php echo esc_attr( $class ); ?>">
                                         <p><label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo esc_html( $setting['label'] ); ?></label></p>
                                         <div class="media-uploader" id="<?php echo $this->get_field_id( $key ); ?>">
                                             <div class="tg-media-preview">

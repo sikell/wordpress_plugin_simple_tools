@@ -84,7 +84,7 @@ function sikeller_tools_get_template( $template_name, $args = array(), $template
  */
 function sikeller_tools_locate_template( $template_name, $template_path = '', $default_path = '' ) {
     if ( ! $template_path ) {
-        $template_path = apply_filters( 'sikeller_tools_template_path', 'flash-toolkit/' );
+        $template_path = apply_filters( 'sikeller_tools_template_path', 'sikeller-tools/' );
     }
 
     if ( ! $default_path ) {

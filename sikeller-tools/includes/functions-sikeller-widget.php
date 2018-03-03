@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Include Widget classes.
 include_once( dirname( __FILE__ ) . '/abstracts/abstract-sikeller-widget.php' );
 include_once( dirname( __FILE__ ) . '/widgets/class-sikeller-widget-heading.php' );
+include_once( dirname( __FILE__ ) . '/widgets/class-sikeller-widget-thumb-image.php' );
 
 /**
  * Register Widgets.
@@ -23,16 +24,18 @@ include_once( dirname( __FILE__ ) . '/widgets/class-sikeller-widget-heading.php'
  */
 function sikeller_tools_register_widgets() {
 	register_widget( 'SK_Widget_Heading' );
+    register_widget( 'SK_Widget_Thumb_Image' );
 }
 add_action( 'widgets_init', 'sikeller_tools_register_widgets' );
 
 /**
- * Adds Flash Toolkit Widgets in SiteOrigin Pagebuilder Tabs.
+ * Adds Tools Widgets in SiteOrigin Pagebuilder Tabs.
  * @since 1.0.0
  */
 function sikeller_tools_widgets($widgets) {
 	$theme_widgets = array(
-		'SK_Widget_Heading'
+		'SK_Widget_Heading',
+        'SK_Widget_Thumb_Image'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {

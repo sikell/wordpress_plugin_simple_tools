@@ -24,7 +24,7 @@ class SK_Widget_Heading extends SK_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'sk-widget section-title-wrapper';
-		$this->widget_description = __( 'Add your heading here.', 'sikeller-tools' );
+		$this->widget_description = __( 'Add a heading here.', 'sikeller-tools' );
 		$this->widget_id          = 'sikeller_tools_heading';
 		$this->widget_name        = __( 'SK: Heading', 'sikeller-tools' );
 		$this->control_ops        = array( 'width' => 400, 'height' => 350 );
