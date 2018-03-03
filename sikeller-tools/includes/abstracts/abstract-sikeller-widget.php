@@ -163,7 +163,7 @@ abstract class SK_Widget extends WP_Widget {
 
                                 case 'select' :
                                     ?>
-                                    <p class="ft-widget-col <?php echo esc_attr( $field_width ); ?>">
+                                    <p class="sk-widget-col <?php echo esc_attr( $field_width ); ?>">
                                         <label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
                                         <select class="widefat <?php echo esc_attr( $class ); ?>" id="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>" name="<?php echo $this->get_field_name( $key ); ?>">
                                             <?php foreach ( $setting['options'] as $option_key => $option_value ) : ?>
@@ -171,6 +171,37 @@ abstract class SK_Widget extends WP_Widget {
                                             <?php endforeach; ?>
                                         </select>
                                     </p>
+                                    <?php
+                                    break;
+
+                                case 'image' :
+                                    ?>
+                                    <div id="tg-widget-image-uploader" class="flash-media <?php echo esc_attr( $class ); ?>">
+                                        <p><label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo esc_html( $setting['label'] ); ?></label></p>
+                                        <div class="media-uploader" id="<?php echo $this->get_field_id( $key ); ?>">
+                                            <div class="tg-media-preview">
+                                                <button class="tg-media-remove dashicons dashicons-no-alt">
+                                                    <span class="screen-reader-text"><?php esc_html_e( 'Remove media', 'sikeller-tools' ) ?></span>
+                                                </button>
+                                                <?php if ( $value != '' ) : ?>
+                                                    <img class="tg-media-preview-default" src="<?php echo esc_url( $value ); ?>" />
+                                                <?php endif; ?>
+                                            </div>
+                                            <p>
+                                                <input type="text" class="widefat tg-media-input"
+                                                       id="<?php echo $this->get_field_id( $key ); ?>"
+                                                       name="<?php echo $this->get_field_name( $key ); ?>"
+                                                       value="<?php echo esc_url( $value ); ?>"
+                                                       style="margin-top:5px;" />
+                                                <button class="tg-image-upload button button-secondary button-large"
+                                                        id="<?php echo $this->get_field_id( $key ); ?>"
+                                                        data-choose="<?php esc_attr_e( 'Choose an image', 'sikeller-tools' ); ?>"
+                                                        data-update="<?php esc_attr_e( 'Use image', 'sikeller-tools' ); ?>"
+                                                        style="width:100%;margin-top:6px;margin-right:30px;">
+                                                    <?php esc_html_e( 'Select an Image', 'sikeller-tools' ); ?></button>
+                                            </p>
+                                        </div>
+                                    </div>
                                     <?php
                                     break;
 
@@ -211,7 +242,7 @@ abstract class SK_Widget extends WP_Widget {
             $instance[$key] = isset($new_instance[$key]) ? strip_tags( $new_instance[$key]) : '';
 
             // Sanitize the value of a setting.
-            $instance[ $key ] = apply_filters( 'flash_toolkit_widget_settings_sanitize_option', $instance[ $key ], $new_instance, $key, $setting );
+            $instance[ $key ] = apply_filters( 'sikeller_tools_widget_settings_sanitize_option', $instance[ $key ], $new_instance, $key, $setting );
         }
 
         return $instance;
