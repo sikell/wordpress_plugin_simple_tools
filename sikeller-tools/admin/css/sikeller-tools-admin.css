@@ -7,3 +7,6 @@
 .sikeller-tab-title-container>a.active {
     background-color: #e5e5e5;
 }
+.tg-media-preview-default {
+    max-width: 100px;
+}

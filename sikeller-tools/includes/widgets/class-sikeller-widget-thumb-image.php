@@ -42,6 +42,18 @@ class SK_Widget_Thumb_Image extends SK_Widget {
                 'label' => __( 'Large linked image', 'sikeller-tools' ),
                 'group' => __( 'General', 'sikeller-tools' ),
             ),
+            'alt_tag'  => array(
+                'type'  => 'text',
+                'std'   => '',
+                'label' => __( 'Image name', 'sikeller-tools' ),
+                'group' => __( 'General', 'sikeller-tools' ),
+            ),
+            'link_title'  => array(
+                'type'  => 'text',
+                'std'   => '',
+                'label' => __( 'Link title', 'sikeller-tools' ),
+                'group' => __( 'General', 'sikeller-tools' ),
+            ),
 		) );
 
 		parent::__construct();
