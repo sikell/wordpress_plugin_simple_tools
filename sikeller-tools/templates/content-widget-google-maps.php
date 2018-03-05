@@ -24,9 +24,9 @@ $id = isset($instance['id']) ? $instance['id'] : 'maps';
 
     <div id="<?php echo esc_html($id); ?>"></div>
     <script>
-        function initMap<?php echo esc_html($id); ?>() {
+        function initMap() {
             var latLong = {lat: <?php echo esc_html($lattitude); ?>, lng: <?php echo esc_html($longitude); ?>};
-            var map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.getElementById('<?php echo esc_html($id); ?>'), {
                 zoom: <?php echo esc_html($zoom); ?>,
                 center: latLong
             });
@@ -40,6 +40,6 @@ $id = isset($instance['id']) ? $instance['id'] : 'maps';
         }
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_html($api_key); ?>&callback=initMap<?php echo esc_html($id); ?>">
+            src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_html($api_key); ?>&callback=initMap">
     </script>
 <?php ?>
