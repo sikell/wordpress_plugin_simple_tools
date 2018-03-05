@@ -34,7 +34,7 @@ $id = isset($instance['id']) ? $instance['id'] : 'maps';
                 position: latLong,
                 map: map,
                 <?php if(!empty($icon)) {
-                    echo 'icon: "'.esc_url($id).'"';
+                    echo 'icon: "'.esc_url($icon).'"';
                 } ?>
             });
         }
