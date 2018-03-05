@@ -2,6 +2,9 @@
 
 This is a simple plugin, which some useful tools and gadgets for developing a wordpress installation.
 
+The plugin is only for personal usage and as template for own development. 
+You should review the code before using it.
+
 ## Contents
 
 ### Widgets
@@ -16,3 +19,9 @@ This is a simple plugin, which some useful tools and gadgets for developing a wo
   * specify a name for this image (SEO)
   * specify a link title (SEO)
   * **this widget can be used to activate multiple lightbox plugins**
+
+* **Google maps widget** for usage in page builder
+  * insert a google maps javascript api
+  * configure api key through backend
+  * configure lattitude, longitude and zoom
+  * select an image as custom marker icon
