@@ -37,7 +37,8 @@ add_action( 'widgets_init', 'sikeller_tools_register_widgets' );
 function sikeller_tools_widgets($widgets) {
 	$theme_widgets = array(
 		'SK_Widget_Heading',
-        'SK_Widget_Thumb_Image'
+        'SK_Widget_Thumb_Image',
+        'SK_Widget_Google_Maps'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {
