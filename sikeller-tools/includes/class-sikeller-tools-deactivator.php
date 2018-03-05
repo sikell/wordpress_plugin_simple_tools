@@ -19,17 +19,19 @@
  * @package    Sikeller_Tools
  * @subpackage Sikeller_Tools/includes
  */
-class Sikeller_Tools_Deactivator {
+class Sikeller_Tools_Deactivator
+{
 
-	/**
-	 * Short Description.
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function deactivate() {
+    /**
+     * Short Description.
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate()
+    {
 
-	}
+    }
 
 }

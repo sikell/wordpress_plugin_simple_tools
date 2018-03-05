@@ -33,8 +33,8 @@ $id = isset($instance['id']) ? $instance['id'] : 'maps';
             var marker = new google.maps.Marker({
                 position: latLong,
                 map: map,
-                <?php if(!empty($icon)) {
-                    echo 'icon: "'.esc_url($icon).'"';
+                <?php if (!empty($icon)) {
+                    echo 'icon: "' . esc_url($icon) . '"';
                 } ?>
             });
         }

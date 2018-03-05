@@ -19,17 +19,19 @@
  * @package    Sikeller_Tools
  * @subpackage Sikeller_Tools/includes
  */
-class Sikeller_Tools_Activator {
+class Sikeller_Tools_Activator
+{
 
-	/**
-	 * Short Description.
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function activate() {
+    /**
+     * Short Description.
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function activate()
+    {
 
-	}
+    }
 
 }

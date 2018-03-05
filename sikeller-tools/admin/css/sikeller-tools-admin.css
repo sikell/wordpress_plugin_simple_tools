@@ -1,12 +1,14 @@
-.sikeller-tab-title-container>a {
+.sikeller-tab-title-container > a {
     padding: 10px;
     display: inline-block;
     text-decoration: none;
     border: 1px #e5e5e5 solid;
 }
-.sikeller-tab-title-container>a.active {
+
+.sikeller-tab-title-container > a.active {
     background-color: #e5e5e5;
 }
+
 .tg-media-preview-default {
     max-width: 100px;
 }
