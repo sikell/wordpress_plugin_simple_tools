@@ -1,6 +1,6 @@
 # Wordpress plugin with some simple tools
 
-This is a simple plugin, which some useful tools and gadgets for developing a wordpress installation.
+This is a simple plugin, with some useful tools and gadgets for developing a wordpress site.
 
 The plugin is only for personal usage and as template for own development. 
 You should review the code before using it.
