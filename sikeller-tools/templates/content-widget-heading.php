@@ -23,7 +23,7 @@ $tag = isset($instance['tag']) && in_array($instance['tag'], $allowedTags) ? $in
 ?>
 <?php
 if (!empty($heading)) { ?>
-    <<?php echo $tag; ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo $tag; ?>>
+    <<?php echo tag_escape($tag); ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo tag_escape($tag); ?>>
 <?php } ?>
 <?php if (!empty($subheading)) { ?>
     <div class="section-description"><?php echo esc_html($subheading); ?></div>
