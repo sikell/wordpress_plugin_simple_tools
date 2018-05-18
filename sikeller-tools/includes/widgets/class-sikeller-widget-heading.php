@@ -38,7 +38,7 @@ class SK_Widget_Heading extends SK_Widget
                 'group' => __('General', 'sikeller-tools'),
             ),
             'subheading' => array(
-                'type' => 'text',
+                'type' => 'textarea',
                 'std' => '',
                 'label' => __('Sub Heading', 'sikeller-tools'),
                 'group' => __('General', 'sikeller-tools'),

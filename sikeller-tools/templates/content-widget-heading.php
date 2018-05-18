@@ -26,5 +26,5 @@ if (!empty($heading)) { ?>
     <<?php echo tag_escape($tag); ?> class="section-title"><?php echo esc_html($heading); ?></<?php echo tag_escape($tag); ?>>
 <?php } ?>
 <?php if (!empty($subheading)) { ?>
-    <div class="section-description"><?php echo esc_html($subheading); ?></div>
+    <div class="section-description"><?php echo nl2br(esc_html($subheading)); ?></div>
 <?php } ?>
